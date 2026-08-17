@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<!--
+  Somak Laha - about page.
+  Plain HTML + CSS. The only JavaScript is the theme switch.
+  The rail below is repeated verbatim in research.html and experience.html;
+  if you change it, change it in all three.
+-->
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Somak Laha</title>
+<meta name="description" content="Somak Laha is a PhD candidate in Statistics at Harvard University, working on random graphs, high-dimensional statistics and random matrix theory.">
+<meta name="color-scheme" content="light dark">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<script>
+/* Set the theme before first paint so the page never flashes the wrong one. */
+(function () {
+  try {
+    var t = localStorage.getItem('theme');
+    if (t !== 'light' && t !== 'dark') {
+      t = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+    }
+    document.documentElement.setAttribute('data-theme', t);
+  } catch (e) { document.documentElement.setAttribute('data-theme', 'light'); }
+})();
+</script>
+</head>
+<body>
+
+<a class="skip" href="#main">Skip to content</a>
+
+<div class="shell">
+
+  <!-- ============================ RAIL ============================ -->
+  <aside class="rail">
+    <div class="rail-top">
+      <!-- Shows the icon of the mode you would switch TO. -->
+      <button class="themebtn" type="button" data-theme-toggle aria-label="Switch theme">
+        <svg class="moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M21 12.9A8.6 8.6 0 1 1 11.1 3a6.7 6.7 0 0 0 9.9 9.9z"/>
+        </svg>
+        <svg class="sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <circle cx="12" cy="12" r="4.1"/>
+          <path d="M12 2.2v2.3M12 19.5v2.3M2.2 12h2.3M19.5 12h2.3M5.1 5.1l1.6 1.6M17.3 17.3l1.6 1.6M18.9 5.1l-1.6 1.6M6.7 17.3l-1.6 1.6"/>
+        </svg>
+      </button>
+    </div>
+
+    <img class="portrait" src="assets/portrait.jpg" alt="Somak Laha" width="168" height="168">
+    <p class="rail-name serif"><a href="index.html" style="color:inherit">Somak Laha</a></p>
+    <p class="rail-role">Fourth Year Ph.D. Candidate in Statistics</p>
+    <p class="rail-affil">Harvard University</p>
+
+    <nav class="rail-nav">
+      <a href="index.html" aria-current="page">About</a>
+      <a href="research.html">Research</a>
+      <a href="experience.html">Experience</a>
+    </nav>
+
+    <div class="rail-links">
+      <a href="assets/Somak_Laha_CV.pdf">Curriculum Vitae</a>
+      <a href="https://scholar.google.com/citations?user=JnLk-XcAAAAJ&amp;hl=en">Google Scholar</a>
+      <a href="https://github.com/somak135">GitHub</a>
+      <a href="https://www.linkedin.com/in/somak-laha">LinkedIn</a>
+      <p class="rail-mail"><a href="mailto:somaklaha@fas.harvard.edu">somaklaha@fas.harvard.edu</a></p>
+    </div>
+  </aside>
+
+  <!-- ============================ CONTENT ============================ -->
+  <main class="content" id="main">
+
+    <h1 class="page-label">About</h1>
+
+    <p class="lede">
+      I work on random graphs, graph neural networks, high-dimensional statistics, and most recently on multi-agent LLM systems. I am advised by
+      <a href="https://sites.google.com/view/morganeaustern/home">Morgane Austern</a>.
+      <strong>I am looking for a quantitative research internship for summer 2027.</strong>
+    </p>
+
+    <div class="prose">
+      <p>
+        I am a fourth-year Ph.D. candidate in the
+        <a href="https://statistics.fas.harvard.edu/">Department of Statistics</a>
+        at Harvard University. Before Harvard I completed my B.Stat. and M.Stat.
+        at the <a href="https://www.isical.ac.in/">Indian Statistical Institute</a>,
+        Kolkata, and then spent a year as a data scientist at Capital One Datalabs
+        in Bangalore, India.
+      </p>
+      <p>
+        At the moment I am working on a few different things. One is over-parameterized
+        regression, and what the pattern of zeros in a design matrix does to its
+        risk curve. Another is graph attention, and whether it can be
+        proved to beat plain neighbourhood averaging instead of merely
+        observed to win on benchmarks. Then there is a random graph model where
+        arriving vertices are blocked from attaching to the biggest hubs, which I
+        have been at since my master's. The newest is about populations of
+        language model agents settling on a convention none of them picked individually.
+      </p>
+    </div>
+
+    <section class="sec">
+      <h2 class="sec-head">Education</h2>
+      <div class="facts">
+        <div class="fact">
+          <strong>Ph.D. in Statistics</strong>
+          <span>Harvard University &middot; 2023&ndash;present</span>
+        </div>
+        <div class="fact">
+          <strong>M.Stat.</strong>
+          <span>Indian Statistical Institute, Kolkata &middot; 2020&ndash;2022</span>
+        </div>
+        <div class="fact">
+          <strong>B.Stat. (Honours)</strong>
+          <span>Indian Statistical Institute, Kolkata &middot; 2017&ndash;2020</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="sec">
+      <h2 class="sec-head">Interests</h2>
+      <div class="tags">
+        <span class="tag">Random graphs</span>
+        <span class="tag">High-dimensional statistics</span>
+        <span class="tag">Graph neural networks</span>
+        <span class="tag">Random matrix theory</span>
+        <span class="tag">Multi-agent LLM systems</span>
+        <span class="tag">Martingale methods</span>
+      </div>
+    </section>
+
+    <section class="sec">
+      <h2 class="sec-head">Computing</h2>
+      <div class="tags">
+        <span class="tag">Python</span>
+        <span class="tag">R</span>
+        <span class="tag">C</span>
+        <span class="tag">SQL</span>
+      </div>
+    </section>
+
+  </main>
+
+</div>
+
+<script>
+document.querySelectorAll('[data-theme-toggle]').forEach(function (b) {
+  function label() {
+    var d = document.documentElement.getAttribute('data-theme') === 'dark';
+    b.setAttribute('aria-label', d ? 'Switch to light theme' : 'Switch to dark theme');
+  }
+  label();
+  b.addEventListener('click', function () {
+    var next = document.documentElement.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+    document.documentElement.setAttribute('data-theme', next);
+    try { localStorage.setItem('theme', next); } catch (e) {}
+    label();
+  });
+});
+</script>
+</body>
+</html>

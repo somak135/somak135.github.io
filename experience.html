@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<!-- Somak Laha - industry and teaching. Rail is shared with the other pages. -->
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Experience &middot; Somak Laha</title>
+<meta name="description" content="Industry experience at Capital One Datalabs and teaching at Harvard University.">
+<meta name="color-scheme" content="light dark">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<script>
+(function () {
+  try {
+    var t = localStorage.getItem('theme');
+    if (t !== 'light' && t !== 'dark') {
+      t = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+    }
+    document.documentElement.setAttribute('data-theme', t);
+  } catch (e) { document.documentElement.setAttribute('data-theme', 'light'); }
+})();
+</script>
+</head>
+<body>
+
+<a class="skip" href="#main">Skip to content</a>
+
+<div class="shell">
+
+  <aside class="rail">
+    <div class="rail-top">
+      <button class="themebtn" type="button" data-theme-toggle aria-label="Switch theme">
+        <svg class="moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M21 12.9A8.6 8.6 0 1 1 11.1 3a6.7 6.7 0 0 0 9.9 9.9z"/>
+        </svg>
+        <svg class="sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <circle cx="12" cy="12" r="4.1"/>
+          <path d="M12 2.2v2.3M12 19.5v2.3M2.2 12h2.3M19.5 12h2.3M5.1 5.1l1.6 1.6M17.3 17.3l1.6 1.6M18.9 5.1l-1.6 1.6M6.7 17.3l-1.6 1.6"/>
+        </svg>
+      </button>
+    </div>
+
+    <img class="portrait" src="assets/portrait.jpg" alt="Somak Laha" width="168" height="168">
+    <p class="rail-name serif"><a href="index.html" style="color:inherit">Somak Laha</a></p>
+    <p class="rail-role">Fourth Year Ph.D. Candidate in Statistics</p>
+    <p class="rail-affil">Harvard University</p>
+
+    <nav class="rail-nav">
+      <a href="index.html">About</a>
+      <a href="research.html">Research</a>
+      <a href="experience.html" aria-current="page">Experience</a>
+    </nav>
+
+    <div class="rail-links">
+      <a href="assets/Somak_Laha_CV.pdf">Curriculum Vitae</a>
+      <a href="https://scholar.google.com/citations?user=JnLk-XcAAAAJ&amp;hl=en">Google Scholar</a>
+      <a href="https://github.com/somak135">GitHub</a>
+      <a href="https://www.linkedin.com/in/somak-laha">LinkedIn</a>
+      <p class="rail-mail"><a href="mailto:somaklaha@fas.harvard.edu">somaklaha@fas.harvard.edu</a></p>
+    </div>
+  </aside>
+
+  <main class="content" id="main">
+
+    <h1 class="page-label">Experience</h1>
+
+    <section class="sec" style="margin-top:0">
+      <h2 class="sec-head">Industry</h2>
+
+      <article class="entry">
+        <div class="entry-meta">
+          <div class="entry-kind">Full-time</div>
+          <div class="entry-when">Jul 2022 &ndash; Aug 2023</div>
+        </div>
+        <div>
+          <h3 class="entry-title">Capital One Datalabs</h3>
+          <p class="entry-people">Data Science Analyst &middot; Bangalore, India</p>
+          <p>
+            I worked on the model behind Capital One's AutoNavigator that
+            estimates what a customer's car is worth as a trade-in. That covered
+            the whole pipeline, from exploratory analysis and feature construction
+            on industry pricing data through an ensemble of gradient-boosted trees
+            (XGBoost and LightGBM) to presenting results the business could act
+            on.
+          </p>
+          <p>
+            Another project I worked on was no-reference image quality assessment for the same
+            platform. The question was whether a photograph of a car was good enough
+            to show someone, with no clean reference image to compare against, so
+            that bad uploads can be filtered before they appear. I evaluated CLIP,
+            SAM, MANIQA and YOLO for it.
+          </p>
+        </div>
+      </article>
+
+      <article class="entry">
+        <div class="entry-meta">
+          <div class="entry-kind">Internship</div>
+          <div class="entry-when">Jun &ndash; Jul 2021</div>
+        </div>
+        <div>
+          <h3 class="entry-title">Capital One Datalabs</h3>
+          <p class="entry-people">Data Analyst Intern &middot; Bangalore, India</p>
+          <p>
+            Two months on the Data Science team, spent building a Bayesian A/B
+            testing framework. Monte Carlo simulation drove both halves of it:
+            choosing sample sizes for the control and treatment groups before a
+            test is run, and evaluating the result afterwards. A Bayesian test reaches the efficiency of a two-sample t-test on
+            substantially smaller samples, so experiments become cheaper, and at a
+            company running many of them that difference compounds.
+          </p>
+          <p>
+            The deliverable was an interactive widget in a Jupyter notebook, so
+            that colleagues without a statistics background could set up a test and
+            read its result themselves rather than routing every experiment through
+            an analyst. The internship ended with a pre-placement offer.
+          </p>
+        </div>
+      </article>
+    </section>
+
+    <section class="sec">
+      <h2 class="sec-head">Teaching</h2>
+      <p class="lede" style="font-size:.98rem;margin-bottom:1.6rem;max-width:70ch">
+        Teaching Fellow at Harvard. Led weekly sections, held office hours,  and graded problem sets and exams.
+      </p>
+
+      <article class="entry">
+        <div class="entry-meta">
+          <div class="entry-kind">Graduate</div>
+          <div class="entry-when">Fall 2026</div>
+        </div>
+        <div>
+          <h3 class="entry-title">STAT 211 &middot; Statistical Inference I</h3>
+          <p class="entry-people">Harvard University</p>
+        </div>
+      </article>
+
+      <article class="entry">
+        <div class="entry-meta">
+          <div class="entry-kind">Graduate</div>
+          <div class="entry-when">Spring 2025</div>
+        </div>
+        <div>
+          <h3 class="entry-title">STAT 212 &middot; Probability II</h3>
+          <p class="entry-people">Harvard University</p>
+        </div>
+      </article>
+
+      <article class="entry">
+        <div class="entry-meta">
+          <div class="entry-kind">Undergraduate</div>
+          <div class="entry-when">Fall 2024</div>
+        </div>
+        <div>
+          <h3 class="entry-title">STAT 120 &middot; Introduction to Bayesian Inference and Applications</h3>
+          <p class="entry-people">Harvard University</p>
+        </div>
+      </article>
+    </section>
+
+    <section class="sec">
+      <h2 class="sec-head">Awards</h2>
+      <div class="facts">
+        <div class="fact">
+          <strong>Academic Award, 2020</strong>
+          <span>Indian Statistical Institute &middot; 5th semester</span>
+        </div>
+        <div class="fact">
+          <strong>KVPY Fellowship, 2016</strong>
+          <span>DST, Govt. of India &middot; All India Rank 689, SX</span>
+        </div>
+        <div class="fact">
+          <strong>IIT-JEE Advanced, 2017</strong>
+          <span>All India Rank 676</span>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+</div>
+
+<script>
+document.querySelectorAll('[data-theme-toggle]').forEach(function (b) {
+  function label() {
+    var d = document.documentElement.getAttribute('data-theme') === 'dark';
+    b.setAttribute('aria-label', d ? 'Switch to light theme' : 'Switch to dark theme');
+  }
+  label();
+  b.addEventListener('click', function () {
+    var next = document.documentElement.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+    document.documentElement.setAttribute('data-theme', next);
+    try { localStorage.setItem('theme', next); } catch (e) {}
+    label();
+  });
+});
+</script>
+</body>
+</html>

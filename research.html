@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<!-- Somak Laha - research. Rail is shared with index.html and experience.html. -->
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Research &middot; Somak Laha</title>
+<meta name="description" content="Preprints, projects and talks by Somak Laha, PhD candidate in Statistics at Harvard University.">
+<meta name="color-scheme" content="light dark">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<script>
+(function () {
+  try {
+    var t = localStorage.getItem('theme');
+    if (t !== 'light' && t !== 'dark') {
+      t = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+    }
+    document.documentElement.setAttribute('data-theme', t);
+  } catch (e) { document.documentElement.setAttribute('data-theme', 'light'); }
+})();
+</script>
+</head>
+<body>
+
+<a class="skip" href="#main">Skip to content</a>
+
+<div class="shell">
+
+  <aside class="rail">
+    <div class="rail-top">
+      <button class="themebtn" type="button" data-theme-toggle aria-label="Switch theme">
+        <svg class="moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M21 12.9A8.6 8.6 0 1 1 11.1 3a6.7 6.7 0 0 0 9.9 9.9z"/>
+        </svg>
+        <svg class="sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <circle cx="12" cy="12" r="4.1"/>
+          <path d="M12 2.2v2.3M12 19.5v2.3M2.2 12h2.3M19.5 12h2.3M5.1 5.1l1.6 1.6M17.3 17.3l1.6 1.6M18.9 5.1l-1.6 1.6M6.7 17.3l-1.6 1.6"/>
+        </svg>
+      </button>
+    </div>
+
+    <img class="portrait" src="assets/portrait.jpg" alt="Somak Laha" width="168" height="168">
+    <p class="rail-name serif"><a href="index.html" style="color:inherit">Somak Laha</a></p>
+    <p class="rail-role">Fourth Year Ph.D. Candidate in Statistics</p>
+    <p class="rail-affil">Harvard University</p>
+
+    <nav class="rail-nav">
+      <a href="index.html">About</a>
+      <a href="research.html" aria-current="page">Research</a>
+      <a href="experience.html">Experience</a>
+    </nav>
+
+    <div class="rail-links">
+      <a href="assets/Somak_Laha_CV.pdf">Curriculum Vitae</a>
+      <a href="https://scholar.google.com/citations?user=JnLk-XcAAAAJ&amp;hl=en">Google Scholar</a>
+      <a href="https://github.com/somak135">GitHub</a>
+      <a href="https://www.linkedin.com/in/somak-laha">LinkedIn</a>
+      <p class="rail-mail"><a href="mailto:somaklaha@fas.harvard.edu">somaklaha@fas.harvard.edu</a></p>
+    </div>
+  </aside>
+
+  <main class="content" id="main">
+
+    <h1 class="page-label">Research</h1>
+
+    <section class="sec" style="margin-top:0">
+      <h2 class="sec-head">Preprints and projects</h2>
+
+      <article class="entry">
+        <div class="entry-meta">
+          <div class="entry-kind">Preprint</div>
+          <div class="entry-when">July 2026</div>
+        </div>
+        <div>
+          <h3 class="entry-title">The Zero Pattern of a Design Matrix Drives Multiple Descent in Over-parameterized Regression</h3>
+          <p class="entry-people">Kevin Han Huang, Haoyu Ye, <strong>Somak Laha</strong>, Morgane Austern</p>
+          <p>
+            Over-parameterized models often predict well even when they interpolate
+            the training data, and plotted against model size the test error can
+            fall, peak at the interpolation threshold, then fall again. Work producing more than one peak
+            has usually put them there by hand, through the architecture or
+            separate feature blocks or distinct kernel scales. We wanted to know
+            when several peaks come out of the data alone.
+          </p>
+          <p>
+            We study ridge least squares with a vanishing penalty, which
+            approximates the minimum-norm interpolator and is also what numerical
+            implementations actually compute, in the proportional regime. The
+            designs we consider can accommodate degeneracies and dependencies. 
+            Data augmentation is an instance of the second kind. We reduce the designs
+            to their variance profile and study the profile directly. A zero entry marks a
+            direction that one observation cannot see, so the degeneracies of the
+            problem are recorded as a pattern of zeros, and that pattern is what
+            the title points at.
+          </p>
+          <p>
+            A single design with a single estimator can
+            show several risk peaks with nothing tuned to place them. The driver is
+            spectral degeneracy rather than heterogeneity on its own, since
+            positive-definite covariances give only the
+            classical peak at ratio one however heterogeneous they are. And one combinatorial rule related
+            to the bipartite graph of the support of the
+            variance profile
+            fixes where the peaks of the risk curve sit. In short, the bias sits on coordinates that some maximum
+            matching leaves unmatched, and a variance peak occurs where the residual
+            matching becomes rigid, both readable off the
+            Dulmage&ndash;Mendelsohn decomposition. Proving it needed a new
+            random-matrix ingredient, an extension of a local law that tracks the
+            spectral parameter explicitly so that it survives a ridge shrinking to
+            zero.
+          </p>
+          <div class="entry-links">
+            <a href="https://arxiv.org/abs/2607.24041">arXiv:2607.24041</a>
+            <a href="https://arxiv.org/pdf/2607.24041">PDF</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="entry">
+        <div class="entry-meta">
+          <div class="entry-kind">Preprint</div>
+          <div class="entry-when">Jan 2026</div>
+        </div>
+        <div>
+          <h3 class="entry-title">
+            Graph Attention Network for Node Regression on Random Geometric Graphs
+            with Erd&#337;s&ndash;R&eacute;nyi Contamination
+            <span class="badge">Submitted, NeurIPS 2026</span>
+          </h3>
+          <p class="entry-people"><strong>Somak Laha</strong>, Suqi Liu, Morgane Austern</p>
+          <p>
+            Graph attention networks let a node weight its neighbours instead of
+            averaging over all of them, and they are now a default choice for
+            node-level prediction. Whether attention provably helps is much less
+            settled. Most of the theory concerns expressivity, meaning which
+            neighbourhood functions an attention layer can represent, and says
+            little about statistical risk.
+          </p>
+          <p>
+            We picked a setting where the question has a clean answer. Every node
+            carries a latent covariate and a response generated linearly from it,
+            but the covariate is only observed with noise. The graph is a
+            random dot-product graph, but contaminated with
+            independent Erd&#337;s&ndash;R&eacute;nyi edges in observation. The geometric edges are informative
+            about the true neighbours, while the Erd&#337;s&ndash;R&eacute;nyi ones are not.
+          </p>
+          <p>
+            Regressing the response on the noisy covariate is an
+            errors-in-variables problem, so least squares carries attenuation bias
+            and is inconsistent. Averaging over every neighbour is spoiled by the
+            spurious edges instead. Our layer screens neighbours by thresholding
+            dot products, keeps the ones that look geometric, and averages their
+            covariates into a proxy for the latent one.
+          </p>
+          <p>
+            Designing that screening step took some care. Using the same coordinates
+            to select neighbours and to average them makes the selection correlated
+            with the measurement noise, and hence with the regression
+            residuals, which biases the estimate.
+          </p>
+          <p>
+            Regressing on the proxies is consistent, and the asymptotic prediction
+            error at an unlabelled node approaches the observation-noise variance
+            even under heavy contamination. Any finite-depth network aggregating
+            raw neighbourhoods does strictly worse once the
+            Erd&#337;s&ndash;R&eacute;nyi degree dominates the geometric one. The
+            proofs lean on high-dimensional geometric tail bounds and concentration
+            for neighbourhood counts and sample covariances, and the synthetic
+            sweeps behave as the theory says they should.
+          </p>
+          <div class="entry-links">
+            <a href="https://arxiv.org/abs/2601.23239">arXiv:2601.23239</a>
+            <a href="https://arxiv.org/pdf/2601.23239">PDF</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="entry">
+        <div class="entry-meta">
+          <div class="entry-kind">In progress</div>
+          <div class="entry-when">2026 &ndash;</div>
+        </div>
+        <div>
+          <h3 class="entry-title">Symmetry breaking and collective bias in populations of LLM agents</h3>
+          <p class="entry-people">With Prof. Subhabrata Sen, Harvard University</p>
+          <p>
+            Ask one language model which letter of the alphabet it prefers and the
+            answer is close to uniform. Put a population of them in a naming game,
+            where agents are paired at random, and they settle on a shared convention without any coordination.
+            The convention itself is not uniform over the options. Some letters win
+            far more often than others.
+          </p>
+          <p>
+            So a bias too small to see in any single agent is presumably being
+            amplified by repeated communication, and we would like to know how
+            small it can be and still win. We model the population with Quantized
+            Simplex Gossip, where each agent holds an internal distribution over
+            the options and updates it from the finite samples it sees from its
+            partners. We start the agents a very small distance off symmetry and follow what
+            happens to that initial asymmetry.
+          </p>
+        </div>
+      </article>
+
+      <article class="entry">
+        <div class="entry-meta">
+          <div class="entry-kind">In progress</div>
+          <div class="entry-when">2022 &ndash;</div>
+        </div>
+        <div>
+          <h3 class="entry-title">Depreferential attachment through preferential attachment</h3>
+          <p class="entry-people">With Prof. Antar Bandyopadhyay, Indian Statistical Institute &middot; M.Stat. dissertation and continuing work</p>
+          <p>
+            In the Barab&aacute;si&ndash;Albert model an arriving vertex attaches to
+            existing ones in proportion to their degree, so the largest vertices
+            grow fastest and the degrees follow a power law. Plenty of real systems
+            work against that. A marketplace rests its best sellers instead of
+            promoting them, and the most prominent people in a field are the hardest
+            ones to reach, so newcomers end up a tier down.
+          </p>
+          <p>
+            This model damps the leaders: at each step some old vertices are
+            sampled in a degree-biased way and declared taboo, and the arriving
+            vertex then does an ordinary preferential attachment step among the
+            rest. A varying taboo budget sets how hard the leaders are held back.
+          </p>
+          <p>
+            For the dissertation I bounded the maximal degree under hard-core
+            tabooing, and bounded the growth of a fixed vertex's degree and of the
+            degree distribution under the soft-core scheme.
+          </p>
+          <p>
+            Since then we have sharpened all of this, and added separate offsets
+            for the two stages. A fixed vertex now grows polynomially,
+            logarithmically or doubly logarithmically depending on how fast the
+            budget grows, with a martingale CLT in each case. The bulk degree
+            distribution results for soft-core tabooing have been sharpened as well, for each of the relevant regimes.
+          </p>
+          <div class="entry-links">
+            <a href="https://docs.google.com/presentation/d/1s523rTgAsEjH-xzNOnprEP1MYDZo0fRN26nrjzCpNeQ/edit?usp=sharing">Dissertation talk</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="entry">
+        <div class="entry-meta">
+          <div class="entry-kind">Project</div>
+          <div class="entry-when">2020</div>
+        </div>
+        <div>
+          <h3 class="entry-title">Edge-preserving regression surface fitting</h3>
+          <p class="entry-people">With Prof. Partha Sarathi Mukherjee, Indian Statistical Institute &middot; with Riddhiman Saha and Souhardya Ray</p>
+          <p>
+            Kernel smoothing fits a surface by averaging over a neighbourhood of
+            each point. Where the true surface has a jump it averages straight
+            across and the discontinuity disappears, which is often the thing you
+            actually wanted: a boundary in an image, a fault in elevation data, a
+            front in a temperature field.
+          </p>
+          <p>
+            Following Qiu and Yandell, we look for a jump before smoothing rather
+            than after. In each small neighbourhood we test whether one plane or two
+            fits the data better. Two planes winning means an edge runs through the
+            neighbourhood, and we then estimate along which line, so the smoothing
+            can be restricted to the points on the same side of it as the centre.
+            Where no edge is found, the ordinary smoother is used unchanged.
+          </p>
+          <p>
+            On simulated surfaces with jumps this beats plain local polynomial
+            smoothing on mean squared error, and it keeps the edges visibly
+            sharper.
+          </p>
+          <div class="entry-links">
+            <a href="https://drive.google.com/file/d/1I9jEeUFPRf-XFdDvBHP0Yfl88-QShuYQ/view?usp=sharing">Report</a>
+            <a href="https://somak135.github.io/edge-preserving-regression-project/#/title">Slides</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="entry">
+        <div class="entry-meta">
+          <div class="entry-kind">Coursework</div>
+          <div class="entry-when">2019</div>
+        </div>
+        <div>
+          <h3 class="entry-title">Shape analysis and satellite image stitching</h3>
+          <p class="entry-people">With Prof. Arnab Chakraborty, Indian Statistical Institute</p>
+          <p>
+            Two projects from the linear models course. The first fitted a Fourier
+            descriptor model for convex shapes using linear mixed effects models,
+            with the fitting routine and a hypothesis test written in R. The second
+            estimated landmark positions from overlapping satellite screenshots and
+            stitched them into a single vector map.
+          </p>
+        </div>
+      </article>
+
+    </section>
+
+    <section class="sec">
+      <h2 class="sec-head">Talks</h2>
+      <article class="entry">
+        <div class="entry-meta">
+          <div class="entry-kind">Contributed</div>
+          <div class="entry-when">Aug 2026</div>
+        </div>
+        <div>
+          <h3 class="entry-title">Joint Statistical Meetings</h3>
+          <p class="entry-people">Boston, Massachusetts</p>
+          <p>Graph Attention Network for Node Regression on Random Geometric Graphs with Erd&#337;s&ndash;R&eacute;nyi Contamination.</p>
+        </div>
+      </article>
+      <article class="entry">
+        <div class="entry-meta">
+          <div class="entry-kind">Contributed</div>
+          <div class="entry-when">Dec 2025</div>
+        </div>
+        <div>
+          <h3 class="entry-title">IMS International Conference on Statistics and Data Science</h3>
+          <p class="entry-people">Seville, Spain</p>
+          <p>Graph Attention Network for Node Regression on Random Geometric Graphs with Erd&#337;s&ndash;R&eacute;nyi Contamination.</p>
+        </div>
+      </article>
+    </section>
+
+  </main>
+
+</div>
+
+<script>
+document.querySelectorAll('[data-theme-toggle]').forEach(function (b) {
+  function label() {
+    var d = document.documentElement.getAttribute('data-theme') === 'dark';
+    b.setAttribute('aria-label', d ? 'Switch to light theme' : 'Switch to dark theme');
+  }
+  label();
+  b.addEventListener('click', function () {
+    var next = document.documentElement.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+    document.documentElement.setAttribute('data-theme', next);
+    try { localStorage.setItem('theme', next); } catch (e) {}
+    label();
+  });
+});
+</script>
+</body>
+</html>
